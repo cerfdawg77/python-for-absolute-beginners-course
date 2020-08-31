@@ -1,0 +1,245 @@
+>>> print "good morning"
+  File "<stdin>", line 1
+    print "good morning"
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("good morning")?
+>>> print ("good morning")
+good morning
+>>> x = 42 #type(x) > <class 'int'>
+>>> y = 19 # type(y) > <class 'int'>
+>>> x + 7*y
+175
+>>> name = "Mark" # type(name) >  <class 'str'>
+>>> name + x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> f'Hi {name}, looks like you did math: {x} + 7*{y} = {x+7*y}'
+'Hi Mark, looks like you did math: 42 + 7*19 = 175'
+>>> sys
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'sys' is not defined
+>>> import sys
+>>> sys
+<module 'sys' (built-in)>
+>>> sys.version_info
+sys.version_info(major=3, minor=8, micro=3, releaselevel='final', serial=0)
+>>> print(f'Hello from Python')
+Hello from Python
+>>> print (f'Hello from Python {sys.version_info.major}.{sys.version_info.minor}!')
+Hello from Python 3.8!
+>>> ma = sys.version_info.major
+>>> ma
+3
+>>> mi = sys.version_info.minor
+>>> mi
+8
+>>> print (f'Hello from Python {ma}.{mi}!')
+Hello from Python 3.8!
+>>> name = "michael"
+>>> print (f"hello {name}")
+hello michael
+>>> name = input('what is your name? ')
+what is your name? Jeff
+>>> name
+'Jeff'
+>>> jeff
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'jeff' is not defined
+>>> Jeff
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Jeff' is not defined
+>>> name
+'Jeff'
+>>> name = input('what is your name? ')
+what is your name? Jeff
+>>> print (f"hello {name}")
+hello Jeff
+>>> age = input("what is your age? ")
+what is your age? 42
+>>> age
+'42'
+>>> next_age = age + 1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> age = input("what is your age? ")
+what is your age? 42
+>>> num = int(age)
+>>> num
+42
+>>> age
+'42'
+>>> next_age = age + 1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> next_age = num + 1
+>>> next_age
+43
+>>> print(f"great, next year you'll be {next_age}!")
+great, next year you'll be 43!
+>>> sys
+<module 'sys' (built-in)>
+>>> sys.version_info
+sys.version_info(major=3, minor=8, micro=3, releaselevel='final', serial=0)
+>>> python
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'python' is not defined
+>>> import sys
+>>> sys
+<module 'sys' (built-in)>
+>>> python
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'python' is not defined
+>>> sys
+<module 'sys' (built-in)>
+>>> sys.version_info
+sys.version_info(major=3, minor=8, micro=3, releaselevel='final', serial=0)
+>>> x =7
+>>> x
+7
+>>> x^2
+5
+>>> x*2
+14
+>>>
+>>> X^3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'X' is not defined
+>>> x^3
+4
+>>> x*4
+28
+>>> x*x
+49
+>>> X*x*x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'X' is not defined
+>>> x*x*x
+343
+>>> name = input('what is your name? ')
+what is your name? mark
+>>> name
+'mark'
+>>> age = input('what is your age? ')
+what is your age? 57
+>>> age
+'57'
+>>> num = int(age)
+>>> num
+57
+>>> f'Hi {name}, looks like I am {num} + 1 = {num+1} and that's one year older than you'
+  File "<stdin>", line 1
+    f'Hi {name}, looks like I am {num} + 1 = {num+1} and that's one year older than you'
+                                                              ^
+SyntaxError: invalid syntax
+>>> name
+'mark'
+>>> age
+'57'
+>>> num
+57
+>>> f'Hi {name}, looks like you are {num}'
+'Hi mark, looks like you are 57'
+>>> f'Hi {name}, looks like I am {num+1}'
+'Hi mark, looks like I am 58'
+>>> f'Hi {name}, looks like I am {58-num} older than you'
+'Hi mark, looks like I am 1 older than you'
+>>> f'Hi {name}, looks like I am {58-num} year older than you'
+'Hi mark, looks like I am 1 year older than you'
+>>> f'Hi {name}, looks like you were born in {2020-num} and i was born in {2020-num+1}'
+'Hi mark, looks like you were born in 1963 and i was born in 1964'
+>>> f'Hi {name}, looks like you were born in {2020-num} and i was born in {2020-num-1}'
+'Hi mark, looks like you were born in 1963 and i was born in 1962'
+>>> import datetime
+>>> datetime
+<module 'datetime' from 'C:\\Users\\mrbyrd\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\datetime.py'>
+>>> date.datetime.now()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'date' is not defined
+>>> datetime.datetime.now()
+datetime.datetime(2020, 8, 31, 11, 38, 51, 56095)
+>>> datetime.datetime.now(year)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'year' is not defined
+>>> datetime
+<module 'datetime' from 'C:\\Users\\mrbyrd\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\datetime.py'>
+>>> datetime.datetime.year()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'getset_descriptor' object is not callable
+>>> datetime.datetime.now()
+datetime.datetime(2020, 8, 31, 11, 42, 9, 797103)
+>>> year = datetime.datetime.now()year
+  File "<stdin>", line 1
+    year = datetime.datetime.now()year
+                                  ^
+SyntaxError: invalid syntax
+>>> datetime
+<module 'datetime' from 'C:\\Users\\mrbyrd\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\datetime.py'>
+>>> import datetime
+>>> year = datetime.datetime.today().year
+>>> yeat
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'yeat' is not defined
+>>> year
+2020
+>>> year = datetime.datetime.now().year
+>>> year
+2020
+>>> month = datetime.datetime.now().month
+>>> month
+8
+>>> day - datetime.datetime.now().day
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'day' is not defined
+>>> day - datetime.datetime.now().date
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'day' is not defined
+>>> day = datetime.datetime.now().date
+>>> dau
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dau' is not defined
+>>> day
+<built-in method date of datetime.datetime object at 0x03B162A8>
+>>> day
+<built-in method date of datetime.datetime object at 0x03B162A8>
+>>> date
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'date' is not defined
+>>> inport datetime
+  File "<stdin>", line 1
+    inport datetime
+           ^
+SyntaxError: invalid syntax
+>>> date = datetime.datetime.now().date
+>>> date
+<built-in method date of datetime.datetime object at 0x03B16230>
+>>> date = datetime.datetime.now().day
+>>> datae
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'datae' is not defined
+>>> date
+31
+>>>#>>> print(f'Hello from Python')
+Hello from Python
+>>> print (f'Hello from Python {sys.version_info.major}.{sys.version_info.minor}!')
+Hello from Python 3.8!
+>>> print (f'Today the year is {year}!')
+Today the year is 2020!
